@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motorcycles | VANTERA MOTORS</title>
+  <meta name="description" content="Browse the full VANTERA motorcycle collection. Filter by category, search by name and sort by price, power or top speed.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VANTERA MOTORS">
+  <meta property="og:title" content="Motorcycles | VANTERA MOTORS">
+  <meta property="og:description" content="Browse the full VANTERA motorcycle collection. Filter by category, search by name and sort by price, power or top speed.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558980394-4c7c9299fe96?auto=format&fit=crop&q=75&w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="motorcycles">
+<main id="main">
+
+<section class="page-hero has-image">
+  <div class="page-hero-media" data-parallax="6"><img src="https://images.unsplash.com/photo-1558980394-4c7c9299fe96?auto=format&fit=crop&q=75&w=1800" alt="Black motorcycle parked under city lights at night" fetchpriority="high" width="1800" height="1200"></div>
+  <div class="container">
+    <p class="eyebrow">THE COLLECTION</p>
+    <h1 class="h-display">MOTORCYCLES</h1>
+    <p class="lead">Eight machines. Four categories. One standard.</p>
+  </div>
+</section>
+
+<section class="toolbar" aria-label="Filter and sort motorcycles">
+  <div class="container toolbar-inner">
+    <div class="filters" role="group" aria-label="Category">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">ALL</button>
+      <button type="button" class="chip" data-filter="Superbike" aria-pressed="false">SUPERBIKE</button>
+      <button type="button" class="chip" data-filter="Sport" aria-pressed="false">SPORT</button>
+      <button type="button" class="chip" data-filter="Naked" aria-pressed="false">NAKED</button>
+      <button type="button" class="chip" data-filter="Touring" aria-pressed="false">TOURING</button>
+    </div>
+    <div class="toolbar-tools">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <label class="sr-only" for="search">Search motorcycles</label>
+        <input id="search" type="search" placeholder="Search motorcycles..." autocomplete="off">
+      </div>
+      <div class="select">
+        <label class="sr-only" for="sort">Sort motorcycles</label>
+        <select id="sort">
+          <option value="default">SORT: FEATURED</option>
+          <option value="price-asc">PRICE: LOW TO HIGH</option>
+          <option value="price-desc">PRICE: HIGH TO LOW</option>
+          <option value="power-desc">POWER: HIGH TO LOW</option>
+          <option value="power-asc">POWER: LOW TO HIGH</option>
+          <option value="speed-desc">TOP SPEED: HIGH TO LOW</option>
+          <option value="speed-asc">TOP SPEED: LOW TO HIGH</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Motorcycle catalog">
+  <div class="container">
+    <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+    <div class="catalog-grid" id="catalog"></div>
+  </div>
+</section>
+
+<section class="section match" id="match" aria-labelledby="match-title">
+  <div class="container match-grid">
+    <div>
+      <p class="eyebrow" data-reveal>VANTERA AI</p>
+      <h2 class="h-section" id="match-title" data-split>WHAT ARE YOU LOOKING FOR?</h2>
+      <p class="lead" style="margin:22px 0 38px" data-reveal>Four questions. One motorcycle from our catalog, chosen by the same scoring the AI concierge uses.</p>
+      <form class="match-form" id="match-form" novalidate>
+        <fieldset><legend>Experience level</legend><div class="options">
+          <label class="option"><input type="radio" name="experience" value="beginner" required><span>Beginner</span></label>
+          <label class="option"><input type="radio" name="experience" value="intermediate"><span>Intermediate</span></label>
+          <label class="option"><input type="radio" name="experience" value="advanced"><span>Advanced</span></label>
+        </div></fieldset>
+        <fieldset><legend>Riding style</legend><div class="options">
+          <label class="option"><input type="radio" name="style" value="city" required><span>City</span></label>
+          <label class="option"><input type="radio" name="style" value="sport"><span>Sport</span></label>
+          <label class="option"><input type="radio" name="style" value="touring"><span>Touring</span></label>
+          <label class="option"><input type="radio" name="style" value="performance"><span>Performance</span></label>
+        </div></fieldset>
+        <fieldset><legend>Priority</legend><div class="options">
+          <label class="option"><input type="radio" name="priority" value="comfort" required><span>Comfort</span></label>
+          <label class="option"><input type="radio" name="priority" value="speed"><span>Speed</span></label>
+          <label class="option"><input type="radio" name="priority" value="technology"><span>Technology</span></label>
+          <label class="option"><input type="radio" name="priority" value="design"><span>Design</span></label>
+        </div></fieldset>
+        <fieldset><legend>Budget</legend><div class="options">
+          <label class="option"><input type="radio" name="budget" value="under15" required><span>Under $15,000</span></label>
+          <label class="option"><input type="radio" name="budget" value="15to25"><span>$15,000–$25,000</span></label>
+          <label class="option"><input type="radio" name="budget" value="25plus"><span>$25,000+</span></label>
+        </div></fieldset>
+        <p class="field-error" id="match-error" role="alert"></p>
+        <div class="hero-actions">
+          <button type="submit" class="btn btn-solid btn-arrow" data-magnetic><span>SHOW MY MATCH</span></button>
+          <button type="reset" class="btn btn-ghost" id="match-reset"><span>RESET</span></button>
+        </div>
+      </form>
+    </div>
+    <div class="match-result" id="match-result" aria-live="polite">
+      <div class="match-placeholder"><div><svg class="emblem" viewBox="0 0 72 72" aria-hidden="true"><path d="M6 8 L36 64 L66 8" fill="none" stroke="currentColor" stroke-width="6"/></svg><p>YOUR VANTERA MATCH<br><span style="font-size:.85rem">Answer all four questions to see your recommendation.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/ai.js" defer></script>
+  <script src="js/motorcycles.js" defer></script>
+</body>
+</html>

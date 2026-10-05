@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Showroom & Test Rides | VANTERA MOTORS</title>
+  <meta name="description" content="Visit the VANTERA showroom, explore our machines, arrange private delivery and book a test ride.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VANTERA MOTORS">
+  <meta property="og:title" content="Showroom & Test Rides | VANTERA MOTORS">
+  <meta property="og:description" content="Visit the VANTERA showroom, explore our machines, arrange private delivery and book a test ride.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&q=75&w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="showroom">
+<main id="main">
+
+<section class="page-hero has-image">
+  <div class="page-hero-media" data-parallax="6"><img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&q=75&w=1800" alt="Dimly lit showroom with a row of motorcycles under spotlights" fetchpriority="high" width="1800" height="1200"></div>
+  <div class="container">
+    <p class="eyebrow">THE SHOWROOM</p>
+    <h1 class="h-display">STEP INSIDE.</h1>
+    <p class="lead">A space designed around one idea: you should meet the machine before you ever read a number.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="our-machines">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-reveal>ON THE FLOOR</p>
+        <h2 class="h-section" id="our-machines" data-split>OUR MACHINES</h2>
+      </div>
+      <p class="lead" data-reveal>Hover or focus a machine to bring it forward.</p>
+    </div>
+    <div class="showcase" id="showcase" data-reveal="fade"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--black)" id="delivery" aria-labelledby="delivery-title">
+  <div class="container">
+    <p class="eyebrow" data-reveal>WHITE-GLOVE SERVICE</p>
+    <h2 class="h-section" id="delivery-title" data-split style="margin-top:20px">PRIVATE DELIVERY</h2>
+    <p class="lead" style="margin-top:22px" data-reveal>Your VANTERA arrives where you are: prepared, registered and ready to ride.</p>
+    <div class="steps" data-stagger>
+      <div class="step"><b>01</b><h3>Choose</h3><p>Select your model, colour and options with a specialist, in the showroom or online.</p></div>
+      <div class="step"><b>02</b><h3>Prepare</h3><p>Every machine is inspected, set up to your height and weight, and run in before it leaves us.</p></div>
+      <div class="step"><b>03</b><h3>Deliver</h3><p>We bring it to your door and walk you through every feature. Then you ride.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section ride" id="test-ride" aria-labelledby="ride-title">
+  <div class="container ride-grid">
+    <div>
+      <p class="eyebrow" data-reveal>TEST RIDE</p>
+      <h2 class="h-section" id="ride-title" data-split style="margin-top:20px">BOOK A TEST RIDE</h2>
+      <p class="lead" data-reveal>Pick a machine and a time. A VANTERA specialist will confirm your slot.</p>
+      <ul class="ride-points" data-stagger>
+        <li>Full riding gear provided</li>
+        <li>Guided route with a VANTERA rider</li>
+        <li>No obligation, no pressure</li>
+      </ul>
+    </div>
+    <div>
+      <form class="form" id="ride-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="r-name">Name <span class="req">*</span></label><input id="r-name" name="name" type="text" autocomplete="name" aria-describedby="r-name-error"><span class="field-error" id="r-name-error"></span></div>
+          <div class="field"><label for="r-email">Email <span class="req">*</span></label><input id="r-email" name="email" type="email" autocomplete="email" aria-describedby="r-email-error"><span class="field-error" id="r-email-error"></span></div>
+          <div class="field"><label for="r-phone">Phone <span class="req">*</span></label><input id="r-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="r-phone-error"><span class="field-error" id="r-phone-error"></span></div>
+          <div class="field"><label for="r-bike">Motorcycle <span class="req">*</span></label><div class="select-wrap"><select id="r-bike" name="bike" aria-describedby="r-bike-error"><option value="">Select a model</option></select></div><span class="field-error" id="r-bike-error"></span></div>
+          <div class="field"><label for="r-date">Preferred date <span class="req">*</span></label><input id="r-date" name="date" type="date" aria-describedby="r-date-error"><span class="field-error" id="r-date-error"></span></div>
+          <div class="field"><label for="r-time">Preferred time <span class="req">*</span></label><div class="select-wrap"><select id="r-time" name="time" aria-describedby="r-time-error"><option value="">Select a time</option><option>09:00</option><option>10:30</option><option>12:00</option><option>14:00</option><option>15:30</option><option>17:00</option></select></div><span class="field-error" id="r-time-error"></span></div>
+        </div>
+        <button type="submit" class="btn btn-solid btn-arrow" data-magnetic><span>REQUEST TEST RIDE</span></button>
+        <p class="form-note">This is a student project: nothing is sent or stored.</p>
+      </form>
+      <div class="form-success" id="ride-success" role="status">
+        <svg class="check" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="30"/><path d="M29 43l9 9 18-20"/></svg>
+        <h3>REQUEST RECEIVED</h3>
+        <p>Your request has been received. A VANTERA specialist will contact you shortly.</p>
+        <button type="button" class="btn btn-ghost" id="ride-again"><span>BOOK ANOTHER</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/ai.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/showroom.js" defer></script>
+</body>
+</html>

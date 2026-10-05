@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | VANTERA MOTORS</title>
+  <meta name="description" content="Contact VANTERA MOTORS: headquarters, opening hours and a message form for sales, test rides and delivery.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VANTERA MOTORS">
+  <meta property="og:title" content="Contact | VANTERA MOTORS">
+  <meta property="og:description" content="Contact VANTERA MOTORS: headquarters, opening hours and a message form for sales, test rides and delivery.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=75&w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">CONTACT</p>
+    <h1 class="h-display">LET'S TALK.</h1>
+    <p class="lead">Questions about a machine, a test ride or delivery? Our specialists are here.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-label="Contact details and form">
+  <div class="container contact-grid">
+    <div>
+      <h2 class="h-sub" data-reveal>VANTERA DESIGN STUDIO</h2>
+      <div class="info-list" data-stagger>
+        <div class="info-item"><small>HEADQUARTERS</small><p>Via dei Motori 21<br>40128 Bologna, Italy</p></div>
+        <div class="info-item"><small>EMAIL</small><a href="mailto:hello@vantera.example">hello@vantera.example</a></div>
+        <div class="info-item"><small>PHONE</small><a href="tel:+390510000000">+39 051 000 0000</a></div>
+        <div class="info-item"><small>OPENING HOURS</small>
+          <dl class="hours"><dt>Mon – Fri</dt><dd>09:00 – 19:00</dd><dt>Saturday</dt><dd>10:00 – 17:00</dd><dt>Sunday</dt><dd>By appointment</dd></dl>
+        </div>
+      </div>
+      <p class="form-note" style="margin-top:22px">Contact details are fictional placeholders for a student project.</p>
+    </div>
+    <div>
+      <form class="form" id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="name" type="text" autocomplete="name" aria-describedby="c-name-error"><span class="field-error" id="c-name-error"></span></div>
+          <div class="field"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" aria-describedby="c-email-error"><span class="field-error" id="c-email-error"></span></div>
+          <div class="field"><label for="c-phone">Phone <span class="req">*</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="c-phone-error"><span class="field-error" id="c-phone-error"></span></div>
+          <div class="field"><label for="c-subject">Subject <span class="req">*</span></label><input id="c-subject" name="subject" type="text" aria-describedby="c-subject-error"><span class="field-error" id="c-subject-error"></span></div>
+          <div class="field full"><label for="c-message">Message <span class="req">*</span> <span class="muted" style="letter-spacing:.1em;text-transform:none">(min. 20 characters)</span></label><textarea id="c-message" name="message" aria-describedby="c-message-error"></textarea><span class="field-error" id="c-message-error"></span></div>
+        </div>
+        <button type="submit" class="btn btn-solid btn-arrow" data-magnetic><span>SEND MESSAGE</span></button>
+        <p class="form-note">This is a student project: your message is validated in the browser and not sent anywhere.</p>
+      </form>
+      <div class="form-success" id="contact-success" role="status">
+        <svg class="check" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="30"/><path d="M29 43l9 9 18-20"/></svg>
+        <h3>MESSAGE RECEIVED</h3>
+        <p>Thank you. A VANTERA specialist will reply within one working day.</p>
+        <button type="button" class="btn btn-ghost" id="contact-again"><span>SEND ANOTHER</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/ai.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+</html>
