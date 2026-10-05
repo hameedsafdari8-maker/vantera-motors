@@ -1,0 +1,134 @@
+/* ==========================================================================
+   VANTERA MOTORS — responsive layout
+   Desktop-first. Breakpoints: 1280 · 1024 · 960 (nav) · 768 · 560 · 380.
+   Mobile makes its own layout decisions rather than just shrinking.
+   ========================================================================== */
+
+@media (min-width: 1920px) {
+  html { font-size: 17px; }
+}
+
+@media (max-width: 1280px) {
+  .nav-ai { display: none; }
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+}
+
+@media (max-width: 1100px) {
+  .stat-grid { grid-template-columns: repeat(3, 1fr); }
+  .stat:nth-child(4) { border-left: 0; }
+  .stat:nth-child(n+4) { border-top: 1px solid var(--line); }
+  .perf-grid { grid-template-columns: repeat(2, 1fr); row-gap: 50px; }
+  .showcase { grid-template-columns: repeat(2, 1fr); height: auto; }
+  .show-item { height: clamp(320px, 52vw, 460px); }
+}
+
+@media (max-width: 960px) {
+  :root { --header-h: 72px; }
+  .nav-links, .nav-actions { display: none; }
+  .burger { display: block; }
+  .site-header.is-scrolled { height: 60px; }
+
+  .hero-tag { display: none; }
+  .split, .match-grid, .detail-two, .ride-grid, .contact-grid { grid-template-columns: 1fr; }
+  .split.reverse .split-media { order: 0; }
+  .split-media { aspect-ratio: 16 / 11; }
+  .match-result { position: static; }
+  .detail-grid { grid-template-columns: 1fr; min-height: 0; padding-bottom: 30px; }
+  .detail-title { order: 1; }
+  .stage { order: 0; }
+  .toolbar { top: 60px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .related-grid { grid-template-columns: 1fr 1fr; }
+  .related-grid .machine-card:last-child { display: none; }
+}
+
+@media (max-width: 768px) {
+  .machine-grid, .catalog-grid { grid-template-columns: 1fr; }
+  .machine-card, .catalog-grid .machine-card { min-height: 460px; }
+  .machine-specs { max-height: 120px; opacity: 1; transform: none; } /* no hover on touch */
+  .show-extra { max-height: 140px; opacity: 1; }
+
+  .spec-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .spec { padding: 14px 14px; }
+  .spec:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .spec:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .hero-content { padding-bottom: 250px; }
+  .hero-media img { object-position: 68% 50%; }
+
+  .steps { grid-template-columns: 1fr; }
+  .step, .step:first-child { padding: 26px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .values { grid-template-columns: 1fr; }
+  .value, .value + .value { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .form-grid { grid-template-columns: 1fr; }
+  .spec-table { grid-template-columns: 1fr; }
+  .feature-list { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 1fr auto; gap: 8px 14px; }
+  .bar-track { grid-column: 1 / -1; order: 3; }
+  .gallery { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+  .gallery figure:first-child { grid-row: auto; }
+  .timeline::before { left: 6px; }
+  .tl-item { grid-template-columns: 1fr; padding: 26px 0 26px 36px; }
+  .tl-body { padding-left: 0; }
+  .tl-body::before { left: -36px; top: -34px; }
+  .tl-year { margin-bottom: 8px; }
+  .mini-specs { grid-template-columns: repeat(2, 1fr); }
+  .mini-specs div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .mini-specs div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .toolbar-tools { margin-left: 0; width: 100%; }
+  .search { flex: 1 1 100%; }
+  .search input, .select select { min-width: 0; }
+  .select { flex: 1 1 100%; }
+  .filters { overflow-x: auto; flex-wrap: nowrap; width: 100%; padding-bottom: 4px; scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .chip { flex-shrink: 0; }
+  .toolbar { position: static; }
+  .section-head { align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .hero-actions .btn, .detail-actions .btn { width: 100%; }
+  .btn { padding: 17px 24px; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(n) { border-left: 1px solid var(--line); border-top: 0; }
+  .stat:nth-child(odd) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .perf-grid { grid-template-columns: 1fr 1fr; gap: 36px 12px; }
+  .showcase { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .related-grid .machine-card:last-child { display: block; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .swatches-label { flex-basis: 100%; }
+  .swatch { padding-right: 10px; }
+  .swatch .swatch-name { display: none; }
+  .machine-specs { gap: 8px 22px; }
+  .machine-foot { flex-wrap: wrap; }
+
+  /* AI panel becomes a bottom sheet */
+  .ai-panel { right: 0; left: 0; bottom: 0; width: 100%; height: min(86dvh, 680px); transform: translateY(40px); }
+  .ai-fab { height: 52px; padding: 0 18px 0 14px; }
+  .ai-fab span { font-size: .72rem; }
+  .ai-fab[aria-expanded="true"] { display: none; }
+}
+
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .brand-text b { font-size: 1.15rem; letter-spacing: .24em; }
+  .brand-text i { letter-spacing: .6em; }
+  .emblem { width: 30px; height: 30px; }
+  .h-display { font-size: 2.8rem; }
+  .spec-value { font-size: 1.6rem; }
+  .perf-grid { grid-template-columns: 1fr; }
+  .chip { padding: 10px 14px; }
+  .machine-specs { grid-template-columns: repeat(3, auto); gap: 8px 14px; }
+}
+
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+@media print {
+  .site-header, .ai-fab, .ai-panel, .loader, .curtain, .cursor-dot, .cursor-ring { display: none !important; }
+  body { background: #fff; color: #000; }
+}
